@@ -20,23 +20,23 @@
   ],
    "homepage": [
     {
-      "id": "http://pi.lib.uchicago.edu/1001/cat/bib/XXXXXXX",
+      "id": "http://node.uchicago.edu/collections/SHORT_NAME",
       "type": "Text",
-      "label": {"en": ["Catalog record (UChicago Library)"]},
+      "label": {"en": ["FULL_NAME"]},
       "format": "text/html"
     }
   ],
   "seeAlso":[
     {
-      "id":"https://link-to-MARCXML/MODS/or-TEI-record",
+      "id":"https://ark.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/file.[xml|ttl|rdf.xml|json]",
       "type":"Dataset",
-      "format":"MARCXML/MODS/or TEI",
-      "label": {"en":["MARCXML/MODS/or TEI record"] }
+       "format":"[text/xml|text/turtle|application/rdf+xml|application/json]",
+      "label": {"en":["MARC|MODS|TEI|...] metadata"] }
     }
   ],
  "rendering": [
     {
-        "id": "https://iiif-server.lib.uchicago.edu/object/ark:61001/b2XXXXXXXXXX/file_identifier.pdf",
+        "id": "https://iiif-server.lib.uchicago.edu/object/ark:61001/b2XXXXXXXXXX/file.pdf",
         "type": "Text",
         "label":{"en":["Download as PDF"]},
         "format": "application/pdf"
