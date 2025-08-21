@@ -1,0 +1,250 @@
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://iiif-collection.lib.uchicago.edu/object/ark:61001/b2XXXXXXXXXX.json",
+  "type": "Manifest",
+
+  "label": { "en": ["BOOK TITLE"] },
+  "behavior": ["paged"],
+  "rights": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "requiredStatement": {
+    "label": { "en": ["Attribution"] },
+    "value": { "en": ["University of Chicago Library"]}
+  },
+  "metadata": [
+    { "label": { "en": ["title"] },       "value": { "en": ["BOOK TITLE"] } },
+    { "label": { "en": ["description"] }, "value": { "en": ["Short description of the object."] } },
+    { "label": { "en": ["date"] },        "value": { "en": ["YYYY"] } },
+    { "label": { "en": ["identifier"] },  "value": { "en": ["LOCAL IDENTIFIER"] } },
+    { "label": { "en": ["language"] },    "value": { "en": ["eng"] } },
+    { "label": { "en": ["ARK identifier"] }, "value": { "en": ["ark:61001/b2XXXXXXXXXX"] } }
+  ],
+   "homepage": [
+    {
+      "id": "http://pi.lib.uchicago.edu/1001/cat/bib/XXXXXXX",
+      "type": "Text",
+      "label": {"en": ["Catalog record (UChicago Library)"]},
+      "format": "text/html"
+    }
+  ],
+  "seeAlso":[
+    {
+      "id":"https://link-to-TEI.xml",
+      "type":"Dataset",
+      "format":"aaplicatication/xml+tei",
+      "label": {"en":["TEI description and structure"] }
+    }
+  ],
+ "rendering": [
+    {
+        "id": "https://iiif-server.lib.uchicago.edu/object/ark:61001/b2XXXXXXXXXX/file_identifier.pdf",
+        "type": "Text",
+        "label":{"en":["Download as PDF"]},
+        "format": "application/pdf"
+    }
+ ],
+  "thumbnail": [
+    {
+      "id": "https://iiif-server.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/IMAGE_ID/full/500,/0/default.jpg",
+      "type": "Image",
+      "format": "image/jpeg",
+      "service": [
+        {
+          "id": "https://iiif-server.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/IMAGE_ID",
+          "type": "ImageService2",
+          "profile": "level2"
+        }
+      ]
+    }
+  ],
+
+  "items": [
+      {
+      "id": "https://iiif-server.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/IMAGE_ID/canvas/cover-front-binding",
+      "type": "Canvas",
+      "label": { "en": ["Cover, Front (binding)"] },
+      "height": 3000,
+      "width": 2000,
+      "items": [
+        {
+          "id": "https://iiif-server.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/IMAGE_ID/canvas/cover-front-binding",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://iiif-server.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/IMAGE_ID/annotation/cover-front-binding",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "id": "https://iiif-server.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/IMAGE_ID/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3000,
+                "width": 2000,
+                "service": [
+                  {
+                    "id": "https://iiif-server.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/IMAGE_ID/cover-front-binding",
+                    "type": "ImageService2",
+                    "profile": "level2"
+                  }
+                ]
+              },
+              "target": "https://iiif-server.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/IMAGE_ID/canvas/cover-front-binding"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://iiif-server.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/IMAGE_ID/canvas/pastedown-front-bookplate",
+      "type": "Canvas",
+      "label": { "en": ["Pastedown (front); Bookplate"] },
+      "height": 3000,
+      "width": 2000,
+      "items": [
+        {
+          "id": "https://iiif-server.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/IMAGE_ID/canvas/pastedown-front-bookplate",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://iiif-server.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/IMAGE_ID/annotation/pastedown-front-bookplate",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "id": "https://iiif-server.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/IMAGE_ID/IMAGE_ID/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3000,
+                "width": 2000,
+                "service": [
+                  {
+                    "id": "https://iiif-server.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/IMAGE_ID/paste-down-front-bookplate",
+                    "type": "ImageService2",
+                    "profile": "level2"
+                  }
+                ]
+              },
+              "target": "https://iiif-server.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/IMAGE_ID/canvas/pastedown-front-bookplate"
+            }
+          ]
+        },
+        {
+       "id": "https://iiif-server.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/IMAGE_ID/canvas/folio1r",
+      "type": "Canvas",
+      "label": { "en": ["folio notation recto"] },
+      "height": 3000,
+      "width": 2000,
+      "items": [
+        {
+          "id": "https://iiif-server.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/IMAGE_ID/canvas/folio1r",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://iiif-server.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/IMAGE_ID/annotation/folio1r",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "id": "https://iiif-server.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/IMAGE_ID/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3000,
+                "width": 2000,
+                "service": [
+                  {
+                    "id": "https://iiif-server.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/IMAGE_ID/folio1r",
+                    "type": "ImageService2",
+                    "profile": "level2"
+                  }
+                ]
+              },
+              "target": "https://iiif-server.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/IMAGE_ID/canvas/folio1r"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://iiif-server.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/IMAGE_ID/canvas/folio1v",
+      "type": "Canvas",
+      "label": { "en": ["folio notation verso"] },
+      "height": 3000,
+      "width": 2000,
+      "items": [
+        {
+          "id": "https://iiif-server.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/IMAGE_ID/canvas/folio1v",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://iiif-server.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/IMAGE_ID/annotation/folio1v",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "id": "https://iiif-server.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/IMAGE_ID/IMAGE_ID/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3000,
+                "width": 2000,
+                "service": [
+                  {
+                    "id": "https://iiif-server.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/IMAGE_ID/folio1v",
+                    "type": "ImageService2",
+                    "profile": "level2"
+                  }
+                ]
+              },
+              "target": "https://iiif-server.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/IMAGE_ID/canvas/folio1v"
+            }
+          ]
+        }
+      ]
+    }
+    
+      ]
+    }
+  ],
+  "structures": [
+    {
+      "id": "https://iiif-collection.lib.uchicago.edu/object/ark:61001/b2XXXXXXXXXX/range/toc",
+      "type": "Range",
+      "label": {"en": ["Table of Contents"]},
+      "behavior": ["top"],
+      "items": [
+      { "id": "https://iiif-collection.lib.uchicago.edu/object/ark:61001/b2XXXXXXXXXX/range/cover-front-binding", "type": "Range" },
+      { "id": "https://iiif-collection.lib.uchicago.edu/object/ark:61001/b2XXXXXXXXXX/range/pastedown-front-bookplate", "type": "Range" },
+      { "id": "https://iiif-collection.lib.uchicago.edu/object/ark:61001/b2XXXXXXXXXX/range/folio1r", "type": "Range" },
+      { "id": "https://iiif-collection.lib.uchicago.edu/object/ark:61001/b2XXXXXXXXXX/range/folio1v", "type": "Range" }
+    ]
+    },
+ {
+    "id": "https://iiif-collection.lib.uchicago.edu/object/ark:61001/b2XXXXXXXXXX/range/cover-front-binding",
+    "type": "Range",
+    "label": { "en": ["Cover, Front (binding)"] },
+    "items": [
+      { "id": "https://iiif-collection.lib.uchicago.edu/object/ark:61001/b2XXXXXXXXXX/canvas/cover-front-binding", "type": "Canvas" }
+    
+    ]
+  },
+  {
+    "id": "https://iiif-collection.lib.uchicago.edu/object/ark:61001/b2XXXXXXXXXX/range/pastedown-front-bookplate",
+    "type": "Range",
+    "label": { "en": ["Pastedown (front); Bookplate"] },
+    "items": [
+      { "id": "https://iiif-collection.lib.uchicago.edu/object/ark:61001/b2XXXXXXXXXX/canvas/pastedown-front-bookplate", "type": "Canvas" }
+    ]
+  },
+  {
+    "id": "https://iiif-collection.lib.uchicago.edu/object/ark:61001/b2XXXXXXXXXX/range/folio1r",
+    "type": "Range",
+    "label": { "en": ["folio notation recto"] },
+    "items": [
+      { "id": "https://iiif-collection.lib.uchicago.edu/object/ark:61001/b2XXXXXXXXXX/canvas/folio1r", "type": "Canvas" }
+    ]
+  },
+  {
+    "id": "https://iiif-collection.lib.uchicago.edu/object/ark:61001/b2XXXXXXXXXX/range/folio1v",
+    "type": "Range",
+    "label": { "en": ["folio notation verso"] },
+    "items": [
+      { "id": "https://iiif-collection.lib.uchicago.edu/object/ark:61001/b2XXXXXXXXXX/canvas/folio1v", "type": "Canvas" }
+    ]
+  }
+]
+}
