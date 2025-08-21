@@ -2,7 +2,6 @@
   "@context": "http://iiif.io/api/presentation/3/context.json",
   "id": "https://iiif-collection.lib.uchicago.edu/object/ark:61001/b2XXXXXXXXXX.json",
   "type": "Manifest",
-
   "label": { "en": ["BOOK TITLE"] },
   "behavior": ["paged"],
   "rights": "https://creativecommons.org/licenses/by-nc/4.0/",
@@ -248,3 +247,4 @@
   }
 ]
 }
+
