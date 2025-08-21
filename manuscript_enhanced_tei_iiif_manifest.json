@@ -75,7 +75,7 @@
         {
           "id": "https://iiif-server.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/IMAGE_ID",
           "type": "ImageService2",
-          "profile": "level2"
+          "profile": "http://iiif.io/api/image/2/level2.json"
         }
       ]
     }
@@ -106,7 +106,7 @@
                   {
                     "id": "https://iiif-server.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/IMAGE_ID/cover-front-binding",
                     "type": "ImageService2",
-                    "profile": "level2"
+                    "profile": "http://iiif.io/api/image/2/level2.json"
                   }
                 ]
               },
@@ -141,7 +141,7 @@
                   {
                     "id": "https://iiif-server.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/IMAGE_ID/paste-down-front-bookplate",
                     "type": "ImageService2",
-                    "profile": "level2"
+                    "profile": "http://iiif.io/api/image/2/level2.json"
                   }
                 ]
               },
@@ -176,7 +176,7 @@
                   {
                     "id": "https://iiif-server.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/IMAGE_ID/folio1r",
                     "type": "ImageService2",
-                    "profile": "level2"
+                    "profile": "http://iiif.io/api/image/2/level2.json"
                   }
                 ]
               },
@@ -211,7 +211,7 @@
                   {
                     "id": "https://iiif-server.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/IMAGE_ID/folio1v",
                     "type": "ImageService2",
-                    "profile": "level2"
+                    "profile": "http://iiif.io/api/image/2/level2.json"
                   }
                 ]
               },
@@ -295,4 +295,5 @@
       ]
     }
   ]
+
 }
