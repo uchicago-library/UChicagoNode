@@ -108,7 +108,7 @@
               "type": "Annotation",
               "motivation": "painting",
               "body": {
-                "id": "https://iiif-server.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/IMAGE_ID/IMAGE_ID/full/full/0/default.jpg",
+                "id": "https://iiif-server.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/IMAGE_ID/full/full/0/default.jpg",
                 "type": "Image",
                 "format": "image/jpeg",
                 "height": 3000,
@@ -176,7 +176,7 @@
               "type": "Annotation",
               "motivation": "painting",
               "body": {
-                "id": "https://iiif-server.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/IMAGE_ID/IMAGE_ID/full/full/0/default.jpg",
+                "id": "https://iiif-server.lib.uchicago.edu/ark:61001/b2XXXXXXXXXX/IMAGE_ID/full/full/0/default.jpg",
                 "type": "Image",
                 "format": "image/jpeg",
                 "height": 3000,
@@ -247,5 +247,6 @@
   }
 ]
 }
+
 
 
