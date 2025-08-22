@@ -2,7 +2,7 @@
   "@context": "http://iiif.io/api/presentation/3/context.json",
   "id": "https://iiif-collection.lib.uchicago.edu/object/ark:61001/b2XXXXXXXXXX.json",
   "type": "Manifest",
-  "label": { "en": ["BOOK TITLE"] },
+  "label": { "en": ["Manuscript Title"] },
   "behavior": ["paged"],
   "rights": "https://creativecommons.org/licenses/by-nc/4.0/",
   "requiredStatement": {
@@ -10,7 +10,7 @@
     "value": { "en": ["University of Chicago Library"]}
   },
   "metadata": [
-    { "label": { "en": ["title"] },       "value": { "en": ["BOOK TITLE"] } },
+    { "label": { "en": ["title"] },       "value": { "en": ["Manuscript Title"] } },
     { "label": { "en": ["description"] }, "value": { "en": ["Short description of the object."] } },
     { "label": { "en": ["date"] },        "value": { "en": ["YYYY"] } },
     { "label": { "en": ["identifier"] },  "value": { "en": ["LOCAL IDENTIFIER"] } },
@@ -247,6 +247,7 @@
   }
 ]
 }
+
 
 
 
