@@ -44,7 +44,7 @@ The following are mandatory Europeana elements for the ore:Aggregation.
 
 + *edm:rights*
 
-By convention, we indicate edm:isShownAt by the URL of the mapping ARK identifier (for this terminology, see [[https://datatracker.ietf.org/doc/html/draft-kunze-ark-28#name-ark-anatomy][https://datatracker.ietf.org/doc/html/draft-kunze-ark-28#name-ark-anatomy]]), and edm:isShownBy by appending ``/file.tif'', ``/file.wav'', etc. to the mapping ARK identifier if the file is going to be retrieved from the OCFL disk hierarchy; otherwise, it should have its own mapping ARK identifier, e.g., if it is going to be served by an external system such as Panopto. 
+By convention, we indicate edm:isShownAt by the URL of the mapping ARK identifier (for this terminology, see [[https://datatracker.ietf.org/doc/html/draft-kunze-ark-28#name-ark-anatomy][https://datatracker.ietf.org/doc/html/draft-kunze-ark-28#name-ark-anatomy]]), and edm:isShownBy by appending ``/file.tif'', ``/file.wav'', etc. to the mapping ARK identifier if the file is going to be retrieved from the OCFL disk hierarchy; otherwise, it should have its own mapping ARK identifier, e.g., if it is going to be served by an external system such as Panopto.
 
 Local usage specifies the following:
 
@@ -55,16 +55,16 @@ In addition to uchicago:inCollection =<http://lib.uchicago.edu/uchicagonode>=, w
 The following is an example of an ore:Aggregation. The order is specified by [[https://europeana.atlassian.net/wiki/x/IICHfQ][Europeana's documentation]].
 
 #+BEGIN_SRC
-<b20x2w73r321/aggregation>                                                                                                            
-edm:aggregatedCHO <b20x2w73r321> ;                                                                                                    
-edm:dataProvider "University of Chicago Library" ;                                                                                    
-edm:isShownAt <b20x2w73r321> ;                                                                                                        
-edm:isShownBy <b20x2w73r321/file.wav> ;                                                                                               
-edm:object "https://www.lib.uchicago.edu/dl/images/audio.jpg" ;[1]                                                                        
-edm:provider "University of Chicago Library" ;                                                                                        
-edm:rights "https://rightsstatements.org/vocab/NoC-US/1.0/" ;[2]                                                                      
-uchicago:inCollection <lib.uchicago.edu/uchicagonode>, <lib.uchicago.edu/mesoamerican-languages-collection>, <lib.uchicago.edu/online-language-archive> ;                                       
-ore:isDescribedBy <b9m865s34c01/rem> ;                                                                                                
+<b20x2w73r321/aggregation>
+edm:aggregatedCHO <b20x2w73r321> ;
+edm:dataProvider "University of Chicago Library" ;
+edm:isShownAt <b20x2w73r321> ;
+edm:isShownBy <b20x2w73r321/file.wav> ;
+edm:object <https://www.lib.uchicago.edu/dl/images/audio.jpg> ;[1]
+edm:provider "University of Chicago Library" ;
+edm:rights <https://rightsstatements.org/vocab/NoC-US/1.0/> ;[2]
+uchicago:inCollection <lib.uchicago.edu/uchicagonode>, <lib.uchicago.edu/mesoamerican-languages-collection>, <lib.uchicago.edu/online-language-archive> ;
+ore:isDescribedBy <b9m865s34c01/rem> ;
 a ore:Aggregation .
 #+END_SRC
 
@@ -73,11 +73,11 @@ See also [[https://github.com/uchicago-library/UChicagoNode/wiki/Notes][https://
 The ore:Aggregation may contain edm:hasView (the value is a link to edm:WebResource). See [[https://europeana.atlassian.net/wiki/spaces/EF/pages/2106032160/ore+Aggregation#edm%3AhasView][https://europeana.atlassian.net/wiki/spaces/EF/pages/2106032160/ore+Aggregation#edm%3AhasView]] for usage.
 
 [1] The URL of a representation of the CHO which will be used for generating previews for use in the Europeana portal.
-This may be the same URL as edm:isShownBy. ... This must be an image, even if it is for a sound object.
+This may be the same URL as edm:isShownBy. ... This must be an image, even if it is for a sound object. It points to a `edm:WebResource`
 [[https://europeana.atlassian.net/wiki/spaces/EF/pages/2106032160/ore+Aggregation#edm%3Aobject][https://europeana.atlassian.net/wiki/spaces/EF/pages/2106032160/ore+Aggregation#edm%3Aobject]]
 
-[2] Copyright metadata needs to be provided for every digital object submitted to Europeana and has to be mapped either to            
-edm:rights ... For additional copyright information dc:rights may be used.                                                            
+[2] Copyright metadata needs to be provided for every digital object submitted to Europeana and has to be mapped either to
+edm:rights ... For additional copyright information dc:rights may be used.
 [[https://europeana.atlassian.net/wiki/spaces/EF/pages/1503756289/Providing+copyright+metadata+to+Europeana#Available-values][https://europeana.atlassian.net/wiki/spaces/EF/pages/1503756289/Providing+copyright+metadata+to+Europeana#Available-values]]
 Ideally [dc:rights] should be applied to the edm:WebResource or the edm:ProvidedCHO. [[https://europeana.atlassian.net/wiki/spaces/EF/pages/2106032160/ore+Aggregation#dc%3Arights][https://europeana.atlassian.net/wiki/spaces/EF/pages/2106032160/ore+Aggregation#dc%3Arights]]
 
@@ -88,11 +88,11 @@ The following are mandatory Europeana elements for the edm:ProvidedCHO. For loca
 
 + One or more the following: /dc:subject/, /_dc:type_/, /dc:coverage/, /dcterms:spatial/, /dcterms:temporal/. [[https://europeana.atlassian.net/wiki/spaces/EF/pages/2106294284/edm+ProvidedCHO#dc%3Asubject]["... if more than one of these properties is available, please provide them all."]]
 
-Local usage requires  _dc:type_. Values should be drawn from the [[https://www.dublincore.org/specifications/dublin-core/dcmi-terms/\#section-7][DCMI Type   Vocabulary]]. These are Collection, Dataset, Event, Image, InteractiveResource, MovingImage, PhysicalObject, Service, Software, Sound, StillImage, Text.  ``Note that digital representations of, or surrogates for, [PhysicalObject] should use Image, Text or one of the other types.''   
+Local usage requires  _dc:type_. Values should be drawn from the [[https://www.dublincore.org/specifications/dublin-core/dcmi-terms/\#section-7][DCMI Type   Vocabulary]]. These are Collection, Dataset, Event, Image, InteractiveResource, MovingImage, PhysicalObject, Service, Software, Sound, StillImage, Text.  ``Note that digital representations of, or surrogates for, [PhysicalObject] should use Image, Text or one of the other types.''
 
 + /dc:language/ for TEXT objects. It is strongly recommended for other   object types if there is a language aspect. Language codes   conforming to ISO 639 are used as values.
 
-+ *edm:type* must occur and must use one of the following values (in   upper case): TEXT, IMAGE, SOUND, VIDEO or 3D. Map DCMI types to EDM   types as follows: 
++ *edm:type* must occur and must use one of the following values (in   upper case): TEXT, IMAGE, SOUND, VIDEO or 3D. Map DCMI types to EDM   types as follows:
 
 : Image : IMAGE
 : MovingImage : VIDEO
@@ -103,7 +103,7 @@ Local usage requires  _dc:type_. Values should be drawn from the [[https://www.d
 In addition to what is specified above, the following is also required by local usage for the /edm:ProvidedCHO/.
 
 + _dc:identifier_. String-literal values for locally-created ARK identifiers are used, e.g.,
-  "https://ark.lib.uchicago.edu/ark:61001/z9m865s34c01". 
+  "https://ark.lib.uchicago.edu/ark:61001/z9m865s34c01".
 
 + _uchicago:identifier_. String-literal values assigned by the Digitization Unit are used, e.g., "G4104-C6-1933-U5-a".
 
@@ -112,36 +112,42 @@ Stories. ([[https://www.dublincore.org/groups/kernel/spec/#anchor3][https://www.
 
 + _erc:who_ The value is drawn from dc(terms):creator,   dc(terms):contributor, or dc(terms):publisher, in that order. If   none of those have values, then use erc:who ``(:unkn) unknown''.
 
-+ _erc:what_ The value is drawn from dc:title or   dc:description, in that order. 
++ _erc:what_ The value is drawn from dc:title or   dc:description, in that order.
 
 + _erc:when_ String-literal values conforming to ISO 8601 or the   [[https://www.loc.gov/standards/datetime/][Extended Date/Time Format Specification (EDTF)]] are used in that order. If a date is not supplied, then use erc:when ``(:unkn)   unknown''.
 
 + _erc:where_ The value is drawn from dc:identifier, which must be present.
 
 Any values which cannot be assigned should be drawn from ``DCMI Kernel Metadata Community: Kernel Metadata and Electronic Resource Citations
-(ERCs)'', [[https://www.dublincore.org/groups/kernel/spec/#anchor16][Section 9.3, Special Kernel Standardized Value Codes]]. 
+(ERCs)'', [[https://www.dublincore.org/groups/kernel/spec/#anchor16][Section 9.3, Special Kernel Standardized Value Codes]].
 
 The following is an example of an edm:ProvidedCHO. This example does not include any elements specific to a particular digital collection
 which may also be included in the edm:ProvidedCHO, for example, from BIBFRAME, VRA Core, etc. It includes only those elements discussed in this section.
 
 #+BEGIN_SRC
-<b20x2w73r321>                                                                                                                        
-dc:contributor "Hanks, William F." , "Unnamed contributor (male)" ;                                                                   
-dc:date "1979" ;                                                                                                                      
-dc:description "Contents: \"History of Cooperativa\"" ;                                                                               
-dc:language "spa" , "yua";                                                                                                            
-dc:title "Yucatec Maya field recordings (Hanks, 1979-1987) Yucatán Maya" ;                                                            
-dc:identifier "https://ark.lib.uchicago.edu/ark:61001/b20x2w73r321" ;                                                                 
-dc:rights "https://rightsstatements.org/vocab/NoC-US/1.0/" ;                                                                          
-dcterms:spatial "7005600" ;                                                                                                           
+<b20x2w73r321>
+dc:contributor "Hanks, William F." , "Unnamed contributor (male)" ;
+bf:contribution [
+    bf:role rel:ivr ;
+    bf:agent viaf:46812195 ;
+    uchicago:agent "Hanks, William F." ;
+] ;
+dc:date "1979" ;
+dc:description "Contents: \"History of Cooperativa\"" ;
+dc:language "spa" , "yua";
+dc:title "Yucatec Maya field recordings (Hanks, 1979-1987) Yucatán Maya" ;
+dc:identifier "https://ark.lib.uchicago.edu/ark:61001/b20x2w73r321" ;
+dc:rights "https://rightsstatements.org/vocab/NoC-US/1.0/" ;
+dcterms:spatial tgn:7005600 ;
+dcterms:type dcmi:Sound ;
 dc:type "Sound";
-edm:type "SOUND" ;  
-uchicago:identifier "G4104-C6-1933-U5-a";                                                                                                                                                                                                                                        
-erc:who "Hanks, William F., interviewer; Unnamed contributor (male), consultant" ;                                                    
-erc:what "Yucatec Maya field recordings (Hanks, 1979-1987) Yucatán Maya" ;                                                            
-erc:when "1979" ;                                                                                                                     
-erc:where "https://ark.lib.uchicago.edu/ark:61001/b20x2w73r321" ;                                                                     
-a edm:ProvidedCHO . 
+edm:type "SOUND" ;
+uchicago:identifier "G4104-C6-1933-U5-a";
+erc:who "Hanks, William F., interviewer; Unnamed contributor (male), consultant" ;
+erc:what "Yucatec Maya field recordings (Hanks, 1979-1987) Yucatán Maya" ;
+erc:when "1979" ;
+erc:where "https://ark.lib.uchicago.edu/ark:61001/b20x2w73r321" ;
+a edm:ProvidedCHO .
 #+END_SRC
 
 ** ore:Proxy
@@ -164,15 +170,15 @@ Note that when an ore:ResourceMap is being created, the values of dcterms:create
 The following are required for an edm:WebResource. The requirements are indicated by example.
 
 #+BEGIN_SRC
-<b20x2w73r321/file.wav>                                                                                                               
-ebucore:hasMimeType "audio/x-wav" ;                                                                                                   
-dcterms:identifier "https://ark.lib.uchicago.edu/ark:61001/b20x2w73r321/file.wav" ;                                                   
-premis:fixity [                                                                                                                       
-  rdf:type <https://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions/sha512> ;                                            
-  rdf:value "10b1a2959f2229ab52e3873651c1d99036caa1e5d641e0bf257"] ;                                                                  
-premis:originalName "FieldRecording1996-2.wav" ;                                                                                      
-premis:size 44694436 ;                                                                                                                
-a edm:WebResource . 
+<b20x2w73r321/file.wav>
+ebucore:hasMimeType "audio/x-wav" ;
+dcterms:identifier "https://ark.lib.uchicago.edu/ark:61001/b20x2w73r321/file.wav" ;
+premis:fixity [
+  rdf:type <https://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions/sha512> ;
+  rdf:value "10b1a2959f2229ab52e3873651c1d99036caa1e5d641e0bf257"] ;
+premis:originalName "FieldRecording1996-2.wav" ;
+premis:size 44694436 ;
+a edm:WebResource .
 #+END_SRC
 
 ** rdfs:Resource
@@ -182,21 +188,29 @@ If rdfs:Resource is used, the following indicates its format. The example is for
 #+BEGIN_SRC
 <b2nw3wm8552h/00000001/file.xml>
 dc:format "application/xml" ;
-a rdfs:Resource . # This is the default type. 
+a rdfs:Resource . # This is the default type.
 #+END_SRC
 
 Namespaces used in this document:
 #+BEGIN_SRC
 @base <https://ark.lib.uchicago.edu/ark:61001/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcam: <http://purl.org/dc/dcam/> .
+@prefix dcmi: <http://purl.org/dc/dcmitype/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix ebucore: <https://www.ebu.ch/metadata/ontologies/ebucore/> .
 @prefix edm: <http://www.europeana.eu/schemas/edm/> .
 @prefix erc: <http://purl.org/kernel/elements/1.1/> .
+@prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
 @prefix ore: <http://www.openarchives.org/ore/terms/> .
 @prefix premis: <https://id.loc.gov/ontologies/premis−3−0−0.html> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tgn: <http://vocab.getty.edu/page/tgn/> .
 @prefix uchicago: <http://lib.uchicago.edu/> .
+@prefix viaf: <http://viaf.org/viaf/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 #+END_SRC
